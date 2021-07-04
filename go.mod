@@ -4,6 +4,8 @@ go 1.16
 
 require (
 	cloud.google.com/go v0.81.0
+	github.com/Azure/azure-sdk-for-go v55.0.0+incompatible
+	github.com/Azure/go-autorest/autorest/to v0.4.0
 	github.com/ReneKroon/ttlcache/v2 v2.5.0
 	github.com/coreos/go-oidc/v3 v3.0.0
 	github.com/gabriel-vasile/mimetype v1.2.0
