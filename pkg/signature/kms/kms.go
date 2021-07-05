@@ -22,11 +22,15 @@ import (
 	"strings"
 
 	"github.com/sigstore/sigstore/pkg/signature"
+	"github.com/sigstore/sigstore/pkg/signature/kms/azure"
 	"github.com/sigstore/sigstore/pkg/signature/kms/gcp"
 	"github.com/sigstore/sigstore/pkg/signature/kms/hashivault"
 )
 
 func init() {
+	ProvidersMux().AddProvider(hashivault.ReferenceScheme, func(ctx context.Context, keyResourceID string, hashFunc crypto.Hash) (SignerVerifier, error) {
+		return azure.LoadSignerVerifier(ctx, keyResourceID, hashFunc)
+	})
 	ProvidersMux().AddProvider(gcp.ReferenceScheme, func(ctx context.Context, keyResourceID string, _ crypto.Hash) (SignerVerifier, error) {
 		return gcp.LoadSignerVerifier(ctx, keyResourceID)
 	})
