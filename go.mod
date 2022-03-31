@@ -47,3 +47,5 @@ require (
 	google.golang.org/protobuf v1.28.0
 	gopkg.in/square/go-jose.v2 v2.6.0
 )
+
+replace github.com/letsencrypt/boulder v0.0.0-20220322173223-dd8be8d7b02c => github.com/cpanato/boulder v0.0.0-20220331081745-acec5537255b
