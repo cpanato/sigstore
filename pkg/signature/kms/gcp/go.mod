@@ -5,12 +5,12 @@ replace github.com/sigstore/sigstore => ../../../../
 go 1.22.8
 
 require (
-	cloud.google.com/go/kms v1.20.1
+	cloud.google.com/go/kms v1.20.2
 	github.com/jellydator/ttlcache/v3 v3.3.0
 	github.com/sigstore/sigstore v1.6.4
 	golang.org/x/oauth2 v0.24.0
 	google.golang.org/api v0.205.0
-	google.golang.org/protobuf v1.35.1
+	google.golang.org/protobuf v1.35.2
 )
 
 require (
